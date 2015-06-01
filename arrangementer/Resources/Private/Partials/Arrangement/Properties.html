@@ -1,75 +1,23 @@
 
-<table class="tx-arrangementer" >
-	<tr>
-		<td>
-			<f:translate key="tx_arrangementer_domain_model_arrangement.titel" />
-		</td>
-		<td>
-		{arrangement.titel}
-		</td>
-	</tr>
-	<tr>
-		<td>
-			<f:translate key="tx_arrangementer_domain_model_arrangement.beskrivelse" />
-		</td>
-		<td>
-		{arrangement.beskrivelse}
-		</td>
-	</tr>
-	<tr>
-		<td>
-			<f:translate key="tx_arrangementer_domain_model_arrangement.start_dato" />
-		</td>
-		<td>
-		{arrangement.startDato -> f:format.date()}
-		</td>
-	</tr>
-	<tr>
-		<td>
-			<f:translate key="tx_arrangementer_domain_model_arrangement.slut_dato" />
-		</td>
-		<td>
-		{arrangement.slutDato -> f:format.date()}
-		</td>
-	</tr>
-	<tr>
-		<td>
-			<f:translate key="tx_arrangementer_domain_model_arrangement.pris" />
-		</td>
-		<td>
+<h1>{arrangement.titel}</h1>
+<f:format.html>{arrangement.beskrivelse}</f:format.html>
+
+<div>
+<p>
+<b>Dato</b><br />
+{arrangement.startDato -> f:format.date()} - 
+{arrangement.slutDato -> f:format.date()}
+<br />
+</p>
+<p><b><f:translate key="tx_arrangementer_domain_model_arrangement.pris" />: </b><br />
 		{arrangement.pris}
-		</td>
-	</tr>
-	<tr>
-		<td>
-			<f:translate key="tx_arrangementer_domain_model_arrangement.open_for_participants" />
-		</td>
-		<td>
-		{arrangement.openForParticipants}
-		</td>
-	</tr>
-	<tr>
-		<td>
-			<f:translate key="tx_arrangementer_domain_model_arrangement.tilmeldingstekst" />
-		</td>
-		<td>
-		{arrangement.tilmeldingstekst}
-		</td>
-	</tr>
-	<tr>
-		<td>
-			<f:translate key="tx_arrangementer_domain_model_arrangement.maalgruppe" />
-		</td>
-		<td>
-		{arrangement.maalgruppe}
-		</td>
-	</tr>
-	<tr>
-		<td>
-			<f:translate key="tx_arrangementer_domain_model_arrangement.registrerings_dato" />
-		</td>
-		<td>
-		{arrangement.registreringsDato -> f:format.date()}
-		</td>
-	</tr>
-</table>
+<br />
+</p>
+<p>
+<b><f:translate key="tx_arrangementer_domain_model_arrangement.maalgruppe" /></b><br />
+{arrangement.maalgruppe}
+<br />
+</p>
+<p><b><a href="/tilmelding">Tilmeld nu</a></b></p>
+</div>
+
