@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="da" datatype="plaintext" original="messages" date="2015-06-01T20:43:23Z" product-name="arrangementer">
+		<header/>
+		<body>
+			<trans-unit id="tx_arrangementer_domain_model_arrangement">
+				<source>Arrangement</source>
+			</trans-unit>
+			<trans-unit id="tx_arrangementer_domain_model_arrangement.titel">
+				<source>Titel</source>
+			</trans-unit>
+			<trans-unit id="tx_arrangementer_domain_model_arrangement.beskrivelse">
+				<source>Beskrivelse</source>
+			</trans-unit>
+			<trans-unit id="tx_arrangementer_domain_model_arrangement.start_dato">
+				<source>Start Dato</source>
+			</trans-unit>
+			<trans-unit id="tx_arrangementer_domain_model_arrangement.slut_dato">
+				<source>Slut Dato</source>
+			</trans-unit>
+			<trans-unit id="tx_arrangementer_domain_model_arrangement.pris">
+				<source>Pris</source>
+			</trans-unit>
+			<trans-unit id="tx_arrangementer_domain_model_arrangement.open_for_participants">
+				<source>Open For Participants</source>
+			</trans-unit>
+			<trans-unit id="tx_arrangementer_domain_model_arrangement.tilmeldingstekst">
+				<source>Tilmeldingstekst</source>
+			</trans-unit>
+			<trans-unit id="tx_arrangementer_domain_model_arrangement.maalgruppe">
+				<source>Maalgruppe</source>
+			</trans-unit>
+			<trans-unit id="tx_arrangementer_domain_model_arrangement.registrerings_dato">
+				<source>Registrerings Dato</source>
+			</trans-unit>
+			<trans-unit id="tx_arrangementer_domain_model_arrangement.sted">
+				<source>Sted</source>
+			</trans-unit>
+			<trans-unit id="tx_arrangementer_domain_model_sted">
+				<source>Sted</source>
+			</trans-unit>
+			<trans-unit id="tx_arrangementer_domain_model_sted.navn">
+				<source>Navn</source>
+			</trans-unit>
+			<trans-unit id="tx_arrangementer_domain_model_sted.gadenavn_og_nummer">
+				<source>Gadenavn Og Nummer</source>
+			</trans-unit>
+			<trans-unit id="tx_arrangementer_domain_model_sted.post_nummer">
+				<source>Post Nummer</source>
+			</trans-unit>
+			<trans-unit id="tx_arrangementer_domain_model_sted.bynavn">
+				<source>Bynavn</source>
+			</trans-unit>
+			<trans-unit id="tx_arrangementer_domain_model_sted.url">
+				<source>Url</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="da" datatype="plaintext" original="messages" date="2015-06-01T20:43:23Z" product-name="arrangementer">
+		<header/>
+		<body>
+			<trans-unit id="navn.description">
+				<source>navn</source>
+			</trans-unit>
+			<trans-unit id="gadenavn_og_nummer.description">
+				<source>gadenavnOgNummer</source>
+			</trans-unit>
+			<trans-unit id="post_nummer.description">
+				<source>postNummer</source>
+			</trans-unit>
+			<trans-unit id="bynavn.description">
+				<source>By</source>
+			</trans-unit>
+			<trans-unit id="url.description">
+				<source>url</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

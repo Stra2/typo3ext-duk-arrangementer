@@ -1,0 +1,45 @@
+
+<f:layout name="Default" />
+
+This Template is responsible for creating a table of domain objects.
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+  Resources:
+    Private:
+      Templates:
+        List.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+<f:section name="main">
+<h1>Listing for Sted</h1>
+
+<f:flashMessages renderMode="div" />
+
+<table  class="tx_arrangementer" >
+	<tr>
+		<th><f:translate key="tx_arrangementer_domain_model_sted.navn" /></th>
+		<th><f:translate key="tx_arrangementer_domain_model_sted.gadenavn_og_nummer" /></th>
+		<th><f:translate key="tx_arrangementer_domain_model_sted.post_nummer" /></th>
+		<th><f:translate key="tx_arrangementer_domain_model_sted.bynavn" /></th>
+		<th><f:translate key="tx_arrangementer_domain_model_sted.url" /></th>
+		<th> </th>
+		<th> </th>
+	</tr>
+
+	<f:for each="{steds}" as="sted">
+		<tr>
+			<td><f:link.action action="show" arguments="{sted : sted}"> {sted.navn}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{sted : sted}"> {sted.gadenavnOgNummer}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{sted : sted}"> {sted.postNummer}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{sted : sted}"> {sted.bynavn}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{sted : sted}"> {sted.url}</f:link.action></td>
+			<td><f:link.action action="edit" arguments="{sted : sted}">Edit</f:link.action></td>
+			<td><f:link.action action="delete" arguments="{sted : sted}">Delete</f:link.action></td>
+		</tr>
+	</f:for>
+</table>
+
+<f:link.action action="new">New Sted</f:link.action>
+</f:section>

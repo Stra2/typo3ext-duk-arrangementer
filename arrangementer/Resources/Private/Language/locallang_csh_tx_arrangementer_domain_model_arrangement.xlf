@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="da" datatype="plaintext" original="messages" date="2015-06-01T20:43:23Z" product-name="arrangementer">
+		<header/>
+		<body>
+			<trans-unit id="titel.description">
+				<source>titel</source>
+			</trans-unit>
+			<trans-unit id="beskrivelse.description">
+				<source>beskrivelse</source>
+			</trans-unit>
+			<trans-unit id="start_dato.description">
+				<source>Start dato</source>
+			</trans-unit>
+			<trans-unit id="slut_dato.description">
+				<source>Slut dato</source>
+			</trans-unit>
+			<trans-unit id="pris.description">
+				<source>pris</source>
+			</trans-unit>
+			<trans-unit id="open_for_participants.description">
+				<source>Åben for tilmelding</source>
+			</trans-unit>
+			<trans-unit id="tilmeldingstekst.description">
+				<source>tilmeldingstekst</source>
+			</trans-unit>
+			<trans-unit id="maalgruppe.description">
+				<source>Målgruppe</source>
+			</trans-unit>
+			<trans-unit id="registrerings_dato.description">
+				<source>Registrerings dato</source>
+			</trans-unit>
+			<trans-unit id="sted.description">
+				<source>sted</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

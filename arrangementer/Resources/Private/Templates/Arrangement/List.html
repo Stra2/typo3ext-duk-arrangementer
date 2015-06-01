@@ -1,0 +1,53 @@
+
+<f:layout name="Default" />
+
+This Template is responsible for creating a table of domain objects.
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+  Resources:
+    Private:
+      Templates:
+        List.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+<f:section name="main">
+<h1>Listing for Arrangement</h1>
+
+<f:flashMessages renderMode="div" />
+
+<table  class="tx_arrangementer" >
+	<tr>
+		<th><f:translate key="tx_arrangementer_domain_model_arrangement.titel" /></th>
+		<th><f:translate key="tx_arrangementer_domain_model_arrangement.beskrivelse" /></th>
+		<th><f:translate key="tx_arrangementer_domain_model_arrangement.start_dato" /></th>
+		<th><f:translate key="tx_arrangementer_domain_model_arrangement.slut_dato" /></th>
+		<th><f:translate key="tx_arrangementer_domain_model_arrangement.pris" /></th>
+		<th><f:translate key="tx_arrangementer_domain_model_arrangement.open_for_participants" /></th>
+		<th><f:translate key="tx_arrangementer_domain_model_arrangement.tilmeldingstekst" /></th>
+		<th><f:translate key="tx_arrangementer_domain_model_arrangement.maalgruppe" /></th>
+		<th><f:translate key="tx_arrangementer_domain_model_arrangement.registrerings_dato" /></th>
+		<th> </th>
+		<th> </th>
+	</tr>
+
+	<f:for each="{arrangements}" as="arrangement">
+		<tr>
+			<td><f:link.action action="show" arguments="{arrangement : arrangement}"> {arrangement.titel}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{arrangement : arrangement}"> {arrangement.beskrivelse}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{arrangement : arrangement}"> {arrangement.startDato -> f:format.date()}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{arrangement : arrangement}"> {arrangement.slutDato -> f:format.date()}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{arrangement : arrangement}"> {arrangement.pris}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{arrangement : arrangement}"> {arrangement.openForParticipants}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{arrangement : arrangement}"> {arrangement.tilmeldingstekst}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{arrangement : arrangement}"> {arrangement.maalgruppe}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{arrangement : arrangement}"> {arrangement.registreringsDato -> f:format.date()}</f:link.action></td>
+			<td><f:link.action action="edit" arguments="{arrangement : arrangement}">Edit</f:link.action></td>
+			<td><f:link.action action="delete" arguments="{arrangement : arrangement}">Delete</f:link.action></td>
+		</tr>
+	</f:for>
+</table>
+
+<f:link.action action="new">New Arrangement</f:link.action>
+</f:section>
