@@ -2,7 +2,6 @@
 <h1>{arrangement.titel}</h1>
 <f:format.html>{arrangement.beskrivelse}</f:format.html>
 
-<div>
 <p>
 <b>Dato</b><br />
 {arrangement.startDato -> f:format.date()} - 
@@ -18,6 +17,6 @@
 {arrangement.maalgruppe}
 <br />
 </p>
-<p><b><a href="/tilmelding">Tilmeld nu</a></b></p>
-</div>
+<p><b><a href="/tilmelding?tx_powermail_pi1[field][uid78]={arrangement.titel}">Tilmeld nu</a></b></p>
+
 
