@@ -48,7 +48,8 @@ class ArrangementController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCont
 	 * @return void
 	 */
 	public function listAction() {
-		$arrangements = $this->arrangementRepository->findByStartDato();
+		$arrangements = $this->arrangementRepository->findByFuture();
+        //$arrangements = $this->arrangementRepository->findAll();
 		$this->view->assign('arrangements', $arrangements);
 	}
 
