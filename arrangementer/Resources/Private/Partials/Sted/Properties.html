@@ -1,7 +1,7 @@
 
-<p><b><f:translate key="tx_arrangementer_domain_model_sted.navn" />:</b><br />
-    {sted.navn} <br />
-    {sted.gadenavnOgNummer} <br />
-    {sted.postNummer} {sted.bynavn} <br />
-    <f:uri.external uri="{sted.url}" />
+<p><b>Sted: </b><br />
+    {arrangement.sted.navn} <br />
+    {arrangement.sted.gadenavnOgNummer} <br />
+    {arrangement.sted.postNummer} {arrangement.sted.bynavn} <br />
+    <a href="{arrangement.sted.url}">{arrangement.sted.url}</a>
 </p>

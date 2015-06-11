@@ -160,17 +160,13 @@ $GLOBALS['TCA']['tx_arrangementer_domain_model_arrangement'] = array(
 			'exclude' => 0,
 			'label' => 'LLL:EXT:arrangementer/Resources/Private/Language/locallang_db.xlf:tx_arrangementer_domain_model_arrangement.sted',
 			'config' => array(
-				'type' => 'inline',
+				'type' => 'select',
+                'size' => 1,
+                'maxitems' => 1,
+                'items' => array(
+                    array('  ', 0),
+                ),
 				'foreign_table' => 'tx_arrangementer_domain_model_sted',
-				'minitems' => 0,
-				'maxitems' => 1,
-				'appearance' => array(
-					'collapseAll' => 0,
-					'levelLinksPosition' => 'top',
-					'showSynchronizationLink' => 1,
-					'showPossibleLocalizationRecords' => 1,
-					'showAllLocalizationLink' => 1
-				),
 			),
 		),
 		
