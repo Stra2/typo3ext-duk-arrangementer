@@ -28,17 +28,19 @@ namespace DUK\Arrangementer\Domain\Repository;
  *  This copyright notice MUST APPEAR in all copies of the script!
  ***************************************************************/
 
+use TYPO3\CMS\Extbase\Persistence\Repository;
+
 /**
  * The repository for Arrangements
  */
-class ArrangementRepository extends \TYPO3\CMS\Extbase\Persistence\Repository {
+class ArrangementRepository extends Repository {
 
 
     public function findByFuture() {
         $today = new \DateTime('now');
         $query = $this->createQuery();
         $query->matching(
-            $query->greaterThanOrEqual('startDato', $today->format('U'))
+            $query->greaterThanOrEqual('startDato', $today->format('Y-m-d'))
         );
 
         return $query->execute();
