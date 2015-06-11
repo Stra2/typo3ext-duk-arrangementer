@@ -33,5 +33,17 @@ namespace DUK\Arrangementer\Domain\Repository;
  */
 class ArrangementRepository extends \TYPO3\CMS\Extbase\Persistence\Repository {
 
-	
+
+    public function findByStartDato() {
+        $today = new \DateTime();
+        $query = $this->createQuery();
+        $query->matching(
+            $query->logicalAnd(
+                $query->greaterThanOrEqual('startDato',$today)
+            )
+        );
+        return $query->execute();
+    }
+
+
 }

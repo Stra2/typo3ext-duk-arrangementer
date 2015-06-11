@@ -43,11 +43,12 @@ class ArrangementController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCont
 
 	/**
 	 * action list
+     * Default listing has startDato >= today
 	 *
 	 * @return void
 	 */
 	public function listAction() {
-		$arrangements = $this->arrangementRepository->findAll();
+		$arrangements = $this->arrangementRepository->findByStartDato();
 		$this->view->assign('arrangements', $arrangements);
 	}
 

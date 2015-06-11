@@ -201,11 +201,19 @@ class Arrangement extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 
 	/**
 	 * Returns the openForParticipants
+     * If the registreringsdato is not set, or is set before today,
+     * it is reflected in the return value of this function.
 	 *
 	 * @return boolean $openForParticipants
 	 */
 	public function getOpenForParticipants() {
-		return $this->openForParticipants;
+        $today = new \DateTime('now');
+        if($this->getRegistreringsDato() !== NULL) {
+            if($this->getRegistreringsDato() < $today) {
+                $this->setOpenForParticipants(false);
+            }
+        }
+        return $this->openForParticipants;
 	}
 
 	/**

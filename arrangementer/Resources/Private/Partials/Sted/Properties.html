@@ -1,43 +1,7 @@
 
-<table class="tx-arrangementer" >
-	<tr>
-		<td>
-			<f:translate key="tx_arrangementer_domain_model_sted.navn" />
-		</td>
-		<td>
-		{sted.navn}
-		</td>
-	</tr>
-	<tr>
-		<td>
-			<f:translate key="tx_arrangementer_domain_model_sted.gadenavn_og_nummer" />
-		</td>
-		<td>
-		{sted.gadenavnOgNummer}
-		</td>
-	</tr>
-	<tr>
-		<td>
-			<f:translate key="tx_arrangementer_domain_model_sted.post_nummer" />
-		</td>
-		<td>
-		{sted.postNummer}
-		</td>
-	</tr>
-	<tr>
-		<td>
-			<f:translate key="tx_arrangementer_domain_model_sted.bynavn" />
-		</td>
-		<td>
-		{sted.bynavn}
-		</td>
-	</tr>
-	<tr>
-		<td>
-			<f:translate key="tx_arrangementer_domain_model_sted.url" />
-		</td>
-		<td>
-		{sted.url}
-		</td>
-	</tr>
-</table>
+<p><b><f:translate key="tx_arrangementer_domain_model_sted.navn" />:</b><br />
+    {sted.navn} <br />
+    {sted.gadenavnOgNummer} <br />
+    {sted.postNummer} {sted.bynavn} <br />
+    <f:uri.external uri="{sted.url}" />
+</p>

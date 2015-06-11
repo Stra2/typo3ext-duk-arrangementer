@@ -30,7 +30,18 @@ Otherwise your changes will be overwritten the next time you save the extension 
 			<td>{arrangement.startDato -> f:format.date()}</td>
 			<td>{arrangement.slutDato -> f:format.date()}</td>
 			<td>{arrangement.pris}</td>
-			<td><a href="/tilmelding?tx_powermail_pi1[field][uid78]={arrangement.titel}">Tilmeld dig</a></td>
+			<td>
+                <f:if condition="{arrangement.tilmeldingstekst}">
+                    <f:then>
+                       {arrangement.tilmeldingstekst}
+                    </f:then>
+                    <f:else>
+                        <f:if condition="{arrangement.openForParticipants}">
+                            <a href="/tilmelding?tx_powermail_pi1[field][uid78]={arrangement.titel}">Tilmeld dig</a>
+                        </f:if>
+                    </f:else>
+                </f:if>
+            </td>
 		</tr>
 	</f:for>
 </table>

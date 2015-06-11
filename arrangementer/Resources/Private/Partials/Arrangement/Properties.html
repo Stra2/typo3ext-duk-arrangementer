@@ -17,6 +17,22 @@
 {arrangement.maalgruppe}
 <br />
 </p>
-<p><b><a href="http://www.duk.dk/arrangementer/tilmelding/?tx_powermail_pi1[field][uid78]={arrangement.titel}">Tilmeld nu</a></b></p>
+
+<f:if condition="{arrangement.sted}">
+    <f:render partial="Sted/Properties" arguments="{arrangement:sted}" />
+</f:if>
+
+<f:if condition="{arrangement.tilmeldingstekst}">
+    <f:then>
+        <p>{arrangement.tilmeldingstekst}</p>
+    </f:then>
+    <f:else>
+        <f:if condition="{arrangement.openForParticipants}">
+            <p><b><a href="http://www.duk.dk/arrangementer/tilmelding/?tx_powermail_pi1[field][uid78]={arrangement.titel}">Tilmeld nu</a></b></p>
+        </f:if>
+    </f:else>
+</f:if>
+
+
 
 
