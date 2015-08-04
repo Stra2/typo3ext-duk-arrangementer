@@ -13,10 +13,13 @@
 <br />
 </p>
 <p>
-<b><f:translate key="tx_arrangementer_domain_model_arrangement.maalgruppe" /></b><br />
+<b>M&aring;lgruppe</b><br />
 {arrangement.maalgruppe}
 <br />
 </p>
-<p><b><a href="http://www.duk.dk/arrangementer/tilmelding/?tx_powermail_pi1[field][uid78]={arrangement.titel}">Tilmeld nu</a></b></p>
+
+<f:if condition="{arrangement.openForParticipants}">
+   <p><b><a href="http://www.duk.dk/arrangementer/tilmelding/?tx_powermail_pi1[field][uid78]={arrangement.titel}">Tilmeld nu</a></b></p>
+</f:if>
 
 
