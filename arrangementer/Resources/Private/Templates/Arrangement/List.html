@@ -4,20 +4,20 @@
 <f:section name="main">
 <!-- h1>Arrangementer</h1 -->
 <f:flashMessages renderMode="div" />
-<table  class="tx_arrangementer" style="background: snowwhite; width: 100%" cellspacing="2" cellpadding="2">
+<table class="tx_arrangementer" style="background: snowwhite; width: 100%; table-layout: fixed;" cellspacing="2" cellpadding="2">
 	<tr>
 		<th><f:translate key="tx_arrangementer_domain_model_arrangement.titel" /></th>
-		<th><f:translate key="tx_arrangementer_domain_model_arrangement.start_dato" /></th>
-		<th><f:translate key="tx_arrangementer_domain_model_arrangement.slut_dato" /></th>
-		<th><f:translate key="tx_arrangementer_domain_model_arrangement.pris" /></th>
-		<th>Tilmeld</th>
+		<th style="width: 56px !important;"><f:translate key="tx_arrangementer_domain_model_arrangement.start_dato" /></th>
+		<th style="width: 56px !important;"><f:translate key="tx_arrangementer_domain_model_arrangement.slut_dato" /></th>
+		<th style="width: 47px !important;"><f:translate key="tx_arrangementer_domain_model_arrangement.pris" /></th>
+		<th style="width: 47px !important;">Tilmeld</th>
 	</tr>
 
 	<f:for each="{arrangements}" as="arrangement">
 		<tr>
 		   <td><f:link.action action="show" arguments="{arrangement : arrangement}"> {arrangement.titel}</f:link.action></td>
-		   <td width="47px;">{arrangement.startDato -> f:format.date()}</td>
-		   <td width="47px;">{arrangement.slutDato -> f:format.date()}</td>
+		   <td>{arrangement.startDato -> f:format.date()}</td>
+		   <td>{arrangement.slutDato -> f:format.date()}</td>
 		   <td>{arrangement.pris}</td>
 		   <td>
                      <f:if condition="{arrangement.tilmeldingstekst}">
