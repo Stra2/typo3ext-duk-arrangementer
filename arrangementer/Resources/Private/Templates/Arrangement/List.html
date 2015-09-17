@@ -26,7 +26,7 @@
                        </f:then>
                        <f:else>
                          <f:if condition="{arrangement.openForParticipants}">
-                           <a href="/tilmelding?tx_powermail_pi1[field][uid78]={arrangement.titel}">Tilmeld</a>
+                           <a href="http://www.duk.dk/arrangementer/tilmelding/?tx_powermail_pi1[field][uid78]={arrangement.titel -> f:format.urlencode()}">Tilmeld</a>
                          </f:if>
                     </f:else>
                      </f:if>
